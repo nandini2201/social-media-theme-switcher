@@ -1,0 +1,399 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+/*header*/
+
+h1 {
+  margin: 0;
+}
+h5 {
+  margin: 0;
+  color: hsl(228, 12%, 44%);
+}
+
+p {
+  margin: 0;
+}
+img {
+  margin-right: 5px;
+}
+
+.header {
+  height: 15rem;
+  margin: 0;
+  padding: 3rem;
+}
+.light {
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 0 0 15px 15px;
+}
+.social-media {
+  font-weight: 700;
+  margin: 0 0 3px 7rem;
+}
+.para,
+.para1 {
+  color: hsl(228, 12%, 44%);
+}
+
+.top-line {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-between;
+  padding: 0 5rem 0 7rem;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  right: 4px;
+  bottom: 4px;
+  background-color: hsl(225, 100%, 98%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider.round:hover {
+  background:  linear-gradient(to right, hsl(210, 78%, 53%), hsl(146, 68%, 55%));
+}
+
+input:checked + .slider {
+  background: linear-gradient(to right, hsl(210, 78%, 53%), hsl(146, 68%, 55%));
+}
+input:checked + .slider:hover::before {
+  background-color: hsl(230, 17%, 30%);
+}
+
+input:checked + .slider:before {
+  background-color: hsl(230, 17%, 14%);
+  transform: translateX(-25px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.mode {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+.mode h5 {
+  margin-right: 10px;
+}
+
+/* top-section*/
+
+.top-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  margin: -100px 10rem 0 10rem;
+}
+.card {
+  min-width: 200px;
+  width: 95%;
+  height: 14rem;
+  background-color: hsl(227, 47%, 96%);
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+.background {
+  width: 100%;
+  background-image: linear-gradient(
+    to left,
+    hsl(329, 70%, 58%),
+    hsl(37, 97%, 70%)
+  );
+  border-radius: 6px;
+}
+.top p {
+  color: hsl(228, 12%, 44%);
+  font-weight: 700;
+}
+.middle p {
+  color: hsl(228, 12%, 44%);
+}
+.facebook {
+  border-top: 3px solid hsl(208, 92%, 53%);
+}
+.twitter {
+  border-top: 3px solid hsl(203, 89%, 53%);
+}
+.insta {
+  width: 100%;
+  height: 99%;
+  position: relative;
+  top: 1%;
+  left: 0;
+
+  /* border-top-width: 3px;
+  border-top-style: solid;
+
+  border-image: linear-gradient(to left, hsl(329, 70%, 58%), hsl(37, 97%, 70%))
+    10 ; */
+}
+
+.youtube {
+  border-top: 3px solid hsl(348, 97%, 39%);
+}
+.top {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.middle {
+  margin-bottom: 2rem;
+}
+.middle h1 {
+  font-size: 55px;
+}
+.middle p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.bottom {
+  display: flex;
+  align-items: center;
+}
+.bottom p {
+  color: hsl(163, 72%, 41%);
+  font-weight: 700;
+}
+p.yt {
+  color: hsl(356, 69%, 56%);
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: hsl(229, 12%, 90%);
+}
+/*Bottom-Section*/
+
+.bottom-section {
+  margin: 2rem 10rem 2rem 10rem;
+}
+
+.overview p {
+  margin: 0 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(228, 12%, 44%);
+  margin-bottom: 2rem;
+}
+
+.overview-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.cards {
+  height: 100%;
+  background-color: hsl(227, 47%, 96%);
+  padding: 8%;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.cards:hover {
+  cursor: pointer;
+  background-color: hsl(228, 34%, 90%);
+}
+.up {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.down {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.per,
+.per-red {
+  display: flex;
+  align-items: center;
+}
+.down h1 {
+  font-size: 26px;
+}
+.per p {
+  color: hsl(163, 72%, 41%);
+  font-weight: 700;
+}
+.per-red p {
+  color: hsl(356, 69%, 56%);
+  font-weight: 700;
+}
+
+.dark {
+  background-color: hsl(230, 17%, 14%);
+}
+
+.header-dark {
+  background-color: hsl(232, 19%, 19%);
+  color: hsl(0, 0%, 100%);
+}
+.card-dark {
+  background-color: hsl(228, 28%, 20%);
+  color: hsl(0, 0%, 100%);
+}
+.card-dark:hover {
+  background-color: hsl(228, 28%, 25%);
+}
+
+@media (max-width: 800px) {
+  .cards {
+    width: 100%;
+  }
+
+  .top-line {
+    display: flex;
+    flex-direction: column;
+  }
+  .top-line .para {
+    border-bottom: 1px solid hsl(228, 12%, 44%);
+    padding-bottom: 19px;
+  }
+  .header {
+    padding: 1rem;
+  }
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: -6rem 6rem 0 6rem;
+  }
+  .overview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mode {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .social-media {
+    margin-bottom: 5px;
+  }
+  .card {
+    margin-top: 20px;
+  }
+
+  .insta {
+    margin-top: 3px;
+  }
+  .background {
+    width: 95%;
+  }
+  .bottom-section {
+    margin: 2rem 6rem 0 6rem;
+  }
+}
+@media (max-width: 500px) {
+  .card {
+    width: 300px;
+  }
+  .background {
+    width: 300px;
+  }
+  .cards {
+    width: 300px;
+  }
+  .bottom-section {
+    margin: 2rem 6rem 2rem 6rem;
+  }
+  .social-media {
+    width: 100%;
+    margin: 0;
+    font-size: 24px;
+  }
+  .top-line {
+    padding: 0;
+  }
+  .header {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .top-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .overview-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 375px) {
+  .top-section {
+    margin-top: -80px;
+  }
+
+  .social-media {
+    width: 100%;
+    margin: 0;
+    font-size: 24px;
+  }
+  .top-line {
+    padding: 0;
+  }
+  .header {
+    padding-left: 20px;
+  }
+}
